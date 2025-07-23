@@ -44,6 +44,37 @@ public class POINT : ICloneable, IComparable<POINT>
     public static bool operator !=(POINT A, POINT B) => !(A == B);
 }
 #endregion
+
+#region Q2
+
+public class Maths
+{
+    public static int add(int x, int y)
+    {
+        return x + y ;
+    }
+    public static int subtract(int x, int y)
+    {
+        return x - y;
+    }
+
+    public static int mult(int x, int y)
+    {
+        return x * y;
+    }
+
+    public static double Divide(int x, int y)
+    {
+        if (y == 0) { 
+            Console.WriteLine("can't div"); 
+        return 0;
+    }
+        else
+            return x / y;
+    }
+     
+}
+#endregion
 namespace OOP05
 {
     internal class Program
@@ -65,6 +96,15 @@ namespace OOP05
             Console.WriteLine("----------");
                 foreach (POINT p in pOINTs)
                 Console.WriteLine(p);
+
+            #endregion
+            #region Q2
+                int x=25 ; int y=5;
+            Console.WriteLine(Maths.add(x, y));
+            Console.WriteLine(Maths.mult(x, y));
+            Console.WriteLine(Maths.subtract(x,y));
+            Console.WriteLine(Maths.Divide(x, y));
+
 
             #endregion
         }
